@@ -1,0 +1,324 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF9E9;
+    color: #252B42;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: #252B42;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 8%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #FFD43B;
+}
+
+.cabecalho nav {
+    display: flex;
+    gap: 25px;
+}
+
+.cabecalho nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cabecalho nav a:hover {
+    color: #FFD43B;
+}
+
+/* APRESENTAÇÃO */
+
+.hero {
+    min-height: 430px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 50px 10%;
+    gap: 30px;
+}
+
+.hero-texto {
+    max-width: 550px;
+}
+
+.etiqueta {
+    color: #D49B00;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 18px 0;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: #E5AD18;
+}
+
+.hero p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.hero-imagem img {
+    width: 300px;
+    max-width: 100%;
+    filter: drop-shadow(0 12px 12px #00000020);
+}
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+
+    background-color: #FFD43B;
+    color: #252B42;
+
+    padding: 14px 25px;
+    border-radius: 8px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #E5AD18;
+    transform: translateY(-3px);
+}
+
+.botao:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* SEÇÃO DOS PERSONAGENS */
+
+.personagens {
+    padding: 70px 8%;
+    background-color: #F3EBD9;
+    text-align: center;
+}
+
+.titulo-secao h2 {
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.titulo-secao p {
+    color: #666;
+}
+
+/* PESQUISA */
+
+.pesquisa {
+    margin: 35px auto;
+    max-width: 450px;
+}
+
+.pesquisa input {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid #DDD;
+    border-radius: 8px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+.pesquisa input:focus {
+    border-color: #E5AD18;
+}
+
+/* LISTA DE CARDS */
+
+.lista-pokemons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* CARD INDIVIDUAL */
+
+.card {
+    background-color: white;
+
+    padding: 20px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px #00000010;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px #00000020;
+}
+
+.card img {
+    width: 100%;
+    max-width: 160px;
+    height: 160px;
+
+    object-fit: contain;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 12px 0;
+    text-transform: capitalize;
+}
+
+.numero {
+    color: #999;
+    font-size: 13px;
+}
+
+.tipos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0;
+}
+
+.tipo {
+    background-color: #FFF0B3;
+    color: #725300;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.informacoes {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* MENSAGENS */
+
+.mensagem {
+    color: #666;
+    margin: 20px 0;
+}
+
+.botao-mais {
+    margin-top: 35px;
+}
+
+.escondido {
+    display: none;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #252B42;
+    color: white;
+
+    padding: 30px;
+    text-align: center;
+    line-height: 2;
+    font-size: 14px;
+}
+
+footer a {
+    color: #FFD43B;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-imagem img {
+        width: 220px;
+    }
+
+    .personagens {
+        padding: 55px 6%;
+    }
+
+    .titulo-secao h2 {
+        font-size: 27px;
+    }
+
+    .lista-pokemons {
+        grid-template-columns:
+            repeat(auto-fit, minmax(145px, 1fr));
+        gap: 12px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card img {
+        height: 120px;
+    }
+
+}

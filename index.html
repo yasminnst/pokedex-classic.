@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex Classic</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="logo">
+            <span>POKÉ</span>DEX CLASSIC
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#personagens">Pokémon</a>
+        </nav>
+    </header>
+
+    <!-- APRESENTAÇÃO -->
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-texto">
+                <span class="etiqueta">SUA JORNADA COMEÇA AQUI</span>
+
+                <h1>
+                    Explore o mundo
+                    <span>Pokémon!</span>
+                </h1>
+
+                <p>
+                    Descubra personagens, conheça suas características
+                    e relembre os clássicos que marcaram gerações.
+                </p>
+
+                <a href="#personagens" class="botao">
+                    Explorar Pokédex
+                </a>
+            </div>
+
+            <div class="hero-imagem">
+                <img
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+                    alt="Pikachu">
+            </div>
+
+        </section>
+
+        <!-- ÁREA DOS PERSONAGENS -->
+        <section class="personagens" id="personagens">
+
+            <div class="titulo-secao">
+                <span class="etiqueta">ENCICLOPÉDIA POKÉMON</span>
+
+                <h2>Conheça os Pokémon</h2>
+
+                <p>
+                    Explore os personagens e descubra suas características.
+                </p>
+            </div>
+
+            <!-- PESQUISA -->
+            <div class="pesquisa">
+                <input
+                    type="text"
+                    id="campoPesquisa"
+                    placeholder="Pesquise um Pokémon pelo nome...">
+
+            </div>
+
+            <!-- MENSAGEM DE CARREGAMENTO -->
+            <p id="mensagem" class="mensagem">
+                Carregando Pokémon...
+            </p>
+
+            <!-- OS CARDS SERÃO INSERIDOS AQUI PELO JAVASCRIPT -->
+            <div id="listaPokemons" class="lista-pokemons">
+
+            </div>
+
+            <button id="botaoMais" class="botao botao-mais">
+                Carregar mais Pokémon
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>Pokédex Classic | Projeto acadêmico</p>
+
+        <p>
+            Dados fornecidos pela
+            <a href="https://pokeapi.co/" target="_blank">
+                PokéAPI
+            </a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
